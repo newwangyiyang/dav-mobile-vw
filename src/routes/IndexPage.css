@@ -1,0 +1,14 @@
+.ip {
+  min-height: 100vh;
+  background-color: teal;
+}
+.ip div {
+  font-size: 26px;
+  color: skyblue;
+  line-height: 40px;
+  margin-top: 20px;
+}
+.ip img {
+  width: 100vw;
+  height: 400px;
+}
