@@ -113,7 +113,9 @@ class HomePage extends Component {
                 <Picker extra="请选择(可选)"
                     data={area}
                     title="Areas"
-                    {...getFieldProps('district')}
+                    {...getFieldProps('district', {
+                        initialValue: ['北京市', '北京市']
+                    })}
                     onOk={() => {
                         console.log(getFieldProps('district').value);
                     }}
