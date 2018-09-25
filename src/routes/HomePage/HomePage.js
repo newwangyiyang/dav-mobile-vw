@@ -4,9 +4,12 @@ import { connect } from 'dva';
 
 import styles from './HomePage.less';
 
-import { WingBlank, WhiteSpace, List, InputItem, Toast, Button } from 'antd-mobile';
+import { WingBlank, WhiteSpace, List, InputItem, Toast, Button, Picker } from 'antd-mobile';
 //受控组件
 import {createForm} from 'rc-form';
+
+//引入地区数据area
+import area from '../../utils/area';
 
 class HomePage extends Component {
     constructor() {
@@ -104,6 +107,20 @@ class HomePage extends Component {
                         })
                     }}>loading button</Button> 
                 </WingBlank>
+
+                <WhiteSpace />
+
+                <Picker extra="请选择(可选)"
+                    data={area}
+                    title="Areas"
+                    {...getFieldProps('district')}
+                    onOk={() => {
+                        console.log(getFieldProps('district').value);
+                    }}
+                    cols='2'
+                    >
+                    <List.Item arrow="horizontal">选择地区</List.Item>
+                </Picker>
             </div>
         )
     }

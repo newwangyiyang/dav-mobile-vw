@@ -19,7 +19,7 @@ axios.interceptors.response.use((res) => {
     //跑出该错误，会被src/index.js中dva({onError() {}})捕获，统一来处理，请求异常
     throw new Error('请求错误');
 
-    return Promise.reject(res);
+    // return Promise.reject(res);
   }
   return res.data;
 }, (error) => {

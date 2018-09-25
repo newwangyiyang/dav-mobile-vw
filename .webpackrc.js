@@ -26,7 +26,7 @@ export default {
   env: {
     "development": {
       "extraBabelPlugins": [
-        "@babel/transform-runtime",
+        "dva-hmr",
         ['import', {
           'libraryName': 'antd-mobile',
           'libraryDirectory': 'lib',
