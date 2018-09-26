@@ -3,6 +3,8 @@ import CSSModules from 'react-css-modules';
 import styles from './ShowPage.less';
 import { connect } from 'dva';
 
+import { Toast, Button } from 'antd-mobile';
+
 class ShowPage extends Component {
     UNSAFE_componentWillMount() {
         const {showPage} = this.props;
@@ -11,7 +13,9 @@ class ShowPage extends Component {
     render() {
         return (
             <div styleName='sp'>
-                123
+                <Button onClick={() => {
+                    Toast.loading('loading...', 10);
+                }}>点击</Button>
             </div>
         )
     }

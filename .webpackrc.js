@@ -27,6 +27,7 @@ export default {
     "development": {
       "extraBabelPlugins": [
         "dva-hmr",
+        "@babel/transform-runtime",
         ['import', {
           'libraryName': 'antd-mobile',
           'libraryDirectory': 'lib',
@@ -61,8 +62,8 @@ export default {
     }),
     postcssCssnext({}),
     postcssViewportUnits({}),
+    // preset: "advanced", 
     cssnano({
-      preset: "advanced", 
       autoprefixer: false, 
       "postcss-zindex": false 
     })
