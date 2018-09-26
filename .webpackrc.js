@@ -16,7 +16,7 @@ export default {
     'Firefox ESR',
     'not ie < 9'
   ],
-  publicPath: "/",
+  publicPath: "/", //打包时需要更改成相对路径
   outputPath: "./dist", //打包输出路径
   hash: true,
   disableDynamicImport: false,

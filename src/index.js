@@ -1,5 +1,4 @@
 import dva from 'dva';
-import './assets/css/reset.css';
 // 1. Initialize
 const app = dva({
     onError(e, dispatch) { //统一处理异常的位置
@@ -13,7 +12,7 @@ const app = dva({
 // 3. Model
 app.model(require('./models/indexPage').default);
 app.model(require('./models/homePage').default);
-
+app.model(require('./models/showPage').default);
 
 // 4. Router
 app.router(require('./router').default);

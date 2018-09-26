@@ -123,6 +123,7 @@ class HomePage extends Component {
                     >
                     <List.Item arrow="horizontal">选择地区</List.Item>
                 </Picker>
+                
             </div>
         )
     }
