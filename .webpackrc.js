@@ -3,7 +3,7 @@ const pxtorem = require('postcss-pxtorem');
 const postcssAspectRatioMini = require('postcss-aspect-ratio-mini');
 const postcssPxToViewport = require('postcss-px-to-viewport');
 const postcssWriteSvg = require('postcss-write-svg');
-const postcssCssnext = require('postcss-cssnext');
+const postcssPresetEnv = require('postcss-preset-env');
 const postcssViewportUnits = require('postcss-viewport-units');
 const cssnano = require('cssnano');
 
@@ -60,7 +60,7 @@ export default {
     postcssWriteSvg({
       utf8: false
     }),
-    postcssCssnext({}),
+    postcssPresetEnv({}),
     postcssViewportUnits({
       filterRule: rule => rule.selector.indexOf('::after') === -1 && rule.selector.indexOf('::before') === -1 && rule.selector.indexOf(':after') === -1 && rule.selector.indexOf(':before') === -1
     }),
